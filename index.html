@@ -1,0 +1,2706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ============================================ -->
+    <!-- 📋 PRIMARY META TAGS                          -->
+    <!-- ============================================ -->
+    <title>Khay Loke — Creator of the Five Prompts series</title>
+    <meta name="title" content="Khay Loke — Creator of the Five Prompts series">
+    <meta name="description" content="Creator of the Five Prompts series. A working library of free prompt packs for AI productivity, prompt engineering, and smarter ways to work with AI.">
+    <meta name="author" content="Khay Loke">
+    <meta name="keywords" content="Khay Loke, Five Prompts, AI productivity, prompt engineering, prompt pack, free ebook, AI tools, Claude prompts, ChatGPT prompts, system prompts, KhayLoke">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0A0A0A">
+    <meta name="color-scheme" content="light dark">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://khayloke.com/">
+    
+    <!-- ============================================ -->
+    <!-- 🌐 OPEN GRAPH (Facebook, LinkedIn, Slack)     -->
+    <!-- ============================================ -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khayloke.com/">
+    <meta property="og:title" content="Khay Loke — Creator of the Five Prompts series">
+    <meta property="og:description" content="A working library of free prompt packs for AI productivity, prompt engineering, and smarter ways to work with AI.">
+    <meta property="og:image" content="https://khayloke.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Khay Loke — Creator of the Five Prompts series">
+    <meta property="og:site_name" content="Khay Loke">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- ============================================ -->
+    <!-- 🐦 TWITTER / X CARD                           -->
+    <!-- ============================================ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://khayloke.com/">
+    <meta name="twitter:title" content="Khay Loke — Creator of the Five Prompts series">
+    <meta name="twitter:description" content="A working library of free prompt packs for AI productivity, prompt engineering, and smarter ways to work with AI.">
+    <meta name="twitter:image" content="https://khayloke.com/og-image.png">
+    <meta name="twitter:image:alt" content="Khay Loke — Creator of the Five Prompts series">
+    
+    <!-- ============================================ -->
+    <!-- 🎨 FAVICON                                    -->
+    <!-- Replace with your custom favicon files later  -->
+    <!-- ============================================ -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia, serif' font-size='20' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%230A0A0A'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia, serif' font-size='110' font-weight='700' fill='white'%3EK%3C/text%3E%3C/svg%3E">
+    
+    <!-- ============================================ -->
+    <!-- 📊 STRUCTURED DATA (Schema.org)               -->
+    <!-- Helps Google display you and your eBooks      -->
+    <!-- prominently in search results                 -->
+    <!-- ============================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Khay Loke",
+      "url": "https://khayloke.com",
+      "image": "https://khayloke.com/portrait.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/khay-loke-50899a14b/"
+      ],
+      "jobTitle": "Creator & Prompt Engineer",
+      "description": "Creator of the Five Prompts series. Building smarter ways to work with AI.",
+      "knowsAbout": [
+        "AI Productivity",
+        "Prompt Engineering",
+        "Data Analytics",
+        "Automation",
+        "Content Creation"
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Khay Loke",
+      "url": "https://khayloke.com",
+      "author": {
+        "@type": "Person",
+        "name": "Khay Loke"
+      },
+      "description": "Creator of the Five Prompts series. A working library of free prompt packs for AI productivity."
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0A0A0A;
+            --paper: #FFFFFF;
+            --dark-bg: #0A0A0A;
+            --offwhite: #F2EFEA;
+            --gray-text: #757575;
+            --muted: #8A8A8A;
+            --light: #BFBFBF;
+            --dark-muted: #A6A6A6;
+            --hairline-lt: #CCCCCC;
+            --hairline-dk: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'EB Garamond', serif;
+            line-height: 1.7;
+            color: var(--ink);
+            background: var(--paper);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Typography */
+        h1, h2, h3 { font-family: 'EB Garamond', serif; font-weight: 700; }
+        .label { font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1.6px; }
+        .mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 0.5px solid var(--hairline-lt);
+            z-index: 1000;
+            padding: 1.5rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1in;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--ink);
+            text-decoration: none;
+        }
+        
+        .logo-text .name {
+            font-weight: 400;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gray-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--ink);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--dark-bg);
+            color: var(--paper);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 1in 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Spotlight effect */
+        .hero-spotlight {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: radial-gradient(
+                circle 600px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(255, 255, 255, 0.06),
+                transparent 70%
+            );
+            transition: background 0.3s ease;
+            z-index: 1;
+        }
+        
+        /* Grain texture overlay */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+        
+        /* Massive background watermark */
+        .hero-bg-watermark {
+            position: absolute;
+            bottom: -2rem;
+            left: 1in;
+            font-family: 'EB Garamond', serif;
+            font-size: clamp(8rem, 18vw, 16rem);
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.025);
+            letter-spacing: 0.05em;
+            line-height: 1;
+            pointer-events: none;
+            z-index: 1;
+            user-select: none;
+        }
+        
+        /* Decorative circle */
+        .hero-circle {
+            position: absolute;
+            right: -10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 700px;
+            height: 700px;
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .hero-text {
+            max-width: 600px;
+        }
+        
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: heroFadeUp 0.8s ease-out forwards;
+        }
+        
+        .hero-eyebrow-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--dark-muted);
+            font-weight: 500;
+        }
+        
+        .hero-eyebrow-line {
+            width: 50px;
+            height: 1px;
+            background: var(--dark-muted);
+        }
+        
+        /* Portrait */
+        .hero-portrait {
+            position: relative;
+            opacity: 0;
+            animation: heroFadeUp 1.2s ease-out 0.4s forwards;
+            justify-self: center;
+        }
+        
+        .hero-portrait-frame {
+            width: 100%;
+            max-width: 420px;
+            aspect-ratio: 4/5;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-portrait-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.05);
+        }
+        
+        /* Vertical line decoration - animated */
+        .hero-vertical-lines {
+            position: absolute;
+            right: 5%;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .hero-vertical-lines span {
+            width: 0.5px;
+            background: linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(255, 255, 255, 0.15) 30%,
+                rgba(255, 255, 255, 0.25) 50%,
+                rgba(255, 255, 255, 0.15) 70%,
+                transparent 100%
+            );
+            animation: lineFlow 4s ease-in-out infinite;
+        }
+        
+        .hero-vertical-lines span:nth-child(1) { animation-delay: 0s; }
+        .hero-vertical-lines span:nth-child(2) { animation-delay: 0.3s; }
+        .hero-vertical-lines span:nth-child(3) { animation-delay: 0.6s; }
+        .hero-vertical-lines span:nth-child(4) { animation-delay: 0.9s; }
+        .hero-vertical-lines span:nth-child(5) { animation-delay: 1.2s; }
+        .hero-vertical-lines span:nth-child(6) { animation-delay: 1.5s; }
+        .hero-vertical-lines span:nth-child(7) { animation-delay: 1.8s; }
+        .hero-vertical-lines span:nth-child(8) { animation-delay: 2.1s; }
+        .hero-vertical-lines span:nth-child(9) { animation-delay: 2.4s; }
+        .hero-vertical-lines span:nth-child(10) { animation-delay: 2.7s; }
+        
+        @keyframes lineFlow {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scaleY(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scaleY(1.05);
+            }
+        }
+        
+        /* Portrait hover effect */
+        .hero-portrait-frame {
+            width: 100%;
+            max-width: 420px;
+            aspect-ratio: 4/5;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+        }
+        
+        .hero-portrait:hover .hero-portrait-frame {
+            transform: scale(1.02);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero-portrait-frame svg,
+        .hero-portrait-frame img {
+            transition: transform 0.8s ease, filter 0.6s ease;
+        }
+        
+        .hero-portrait:hover .hero-portrait-frame svg,
+        .hero-portrait:hover .hero-portrait-frame img {
+            transform: scale(1.05);
+        }
+        
+        /* Museum plaque caption */
+        .hero-portrait-caption {
+            position: absolute;
+            bottom: -3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            opacity: 0;
+            transition: opacity 0.5s ease, bottom 0.5s ease;
+            white-space: nowrap;
+            text-align: center;
+        }
+        
+        .hero-portrait:hover .hero-portrait-caption {
+            opacity: 1;
+            bottom: -2.5rem;
+        }
+        
+        .hero-portrait-caption .caption-name {
+            font-family: 'EB Garamond', serif;
+            font-size: 0.85rem;
+            font-style: italic;
+            color: var(--paper);
+        }
+        
+        .hero-portrait-caption .caption-meta {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--dark-muted);
+            font-weight: 500;
+        }
+        
+        /* ============ SCROLL REVEAL ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        
+        /* Status bar at bottom */
+        .hero-status {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 1in;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--dark-muted);
+            font-weight: 500;
+            z-index: 4;
+            opacity: 0;
+            animation: heroFadeUp 1s ease-out 1.5s forwards;
+        }
+        
+        .hero-status-line {
+            width: 50px;
+            height: 1px;
+            background: var(--dark-muted);
+        }
+        
+        .hero-status-dot {
+            color: var(--dark-muted);
+        }
+        
+        .eyebrow {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--dark-muted);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 6.5vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            opacity: 0;
+            animation: heroFadeUp 1s ease-out 0.2s forwards;
+        }
+        
+        .hero h1 .name-italic {
+            font-style: italic;
+        }
+        
+        @keyframes heroFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .short-dash {
+            width: 0;
+            height: 2px;
+            background: var(--paper);
+            margin: 1.5rem 0 1.75rem;
+            animation: dashGrow 0.8s ease-out 0.9s forwards;
+        }
+        
+        @keyframes dashGrow {
+            to {
+                width: 50px;
+            }
+        }
+        
+        .hero-tagline-wrapper {
+            position: relative;
+            max-width: 500px;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: heroFadeUp 1s ease-out 1.1s forwards;
+        }
+        
+        .hero-tagline {
+            font-size: 1rem;
+            color: var(--light);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        .rotating-words {
+            font-size: 1rem;
+            color: var(--light);
+            line-height: 1.8;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        
+        .rotating-words .label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gray-text);
+            font-style: normal;
+            font-weight: 500;
+        }
+        
+        .rotating-word-stage {
+            position: relative;
+            display: inline-block;
+            min-width: 360px;
+            height: 1.5em;
+            overflow: hidden;
+        }
+        
+        .rotating-word {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            color: var(--paper);
+            font-style: italic;
+        }
+        
+        .rotating-word.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .rotating-word.exiting {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        
+        /* Hero CTA Buttons */
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            opacity: 0;
+            animation: heroFadeUp 1s ease-out 1.3s forwards;
+        }
+        
+        .hero-btn {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            padding: 1rem 1.75rem;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            will-change: transform;
+        }
+        
+        .hero-btn-primary {
+            background: var(--paper);
+            color: var(--ink);
+            border: 1px solid var(--paper);
+        }
+        
+        .hero-btn-primary:hover {
+            background: transparent;
+            color: var(--paper);
+        }
+        
+        .hero-btn-secondary {
+            background: transparent;
+            color: var(--paper);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .hero-btn-secondary:hover {
+            border-color: var(--paper);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .hero-btn .arrow {
+            transition: transform 0.3s ease;
+        }
+        
+        .hero-btn:hover .arrow {
+            transform: translateX(4px);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 1in;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title .italic-tail {
+            font-style: italic;
+        }
+        
+        .section-subtitle {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--gray-text);
+            margin-top: 1rem;
+        }
+        
+        /* Project Cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+            max-width: 1100px;
+        }
+        
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        
+        .project-cover {
+            width: 100%;
+            aspect-ratio: 8.5 / 11;
+            background: var(--dark-bg);
+            margin-bottom: 1.25rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        .project-card:hover .project-cover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-card:hover h3 {
+            color: var(--gray-text);
+        }
+        
+        .project-cover svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        .project-meta {
+            border-top: 0.5px solid var(--hairline-lt);
+            padding-top: 1rem;
+        }
+        
+        .project-meta h3 {
+            transition: color 0.3s ease;
+        }
+        
+        .project-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .project-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .project-card p {
+            font-size: 1rem;
+            color: var(--gray-text);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tag {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            font-weight: 500;
+        }
+        
+        /* About Section - Editorial Two-Column */
+        .about-intro {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            padding-bottom: 4rem;
+            border-bottom: 0.5px solid var(--hairline-lt);
+        }
+        
+        .about-intro-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--gray-text);
+            font-weight: 500;
+            padding-top: 0.5rem;
+        }
+        
+        .about-intro-text {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--ink);
+            font-family: 'EB Garamond', serif;
+        }
+        
+        .about-intro-text::first-letter {
+            font-size: 4.5rem;
+            font-weight: 700;
+            float: left;
+            line-height: 0.9;
+            margin-right: 0.75rem;
+            margin-top: 0.5rem;
+            font-family: 'EB Garamond', serif;
+        }
+        
+        .about-intro-text em {
+            font-style: italic;
+            color: var(--ink);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem 5rem;
+            margin-top: 4rem;
+        }
+        
+        .about-item {
+            border-top: none;
+            padding-top: 0;
+            position: relative;
+        }
+        
+        .about-item-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+        
+        .about-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-family: 'EB Garamond', serif;
+        }
+        
+        .about-item h3 .italic-tail {
+            font-style: italic;
+        }
+        
+        .about-item p {
+            font-size: 1rem;
+            color: var(--gray-text);
+            line-height: 1.7;
+            font-family: 'EB Garamond', serif;
+        }
+        
+        .about-item p::first-letter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            float: left;
+            line-height: 0.95;
+            margin-right: 0.5rem;
+            margin-top: 0.25rem;
+            color: var(--ink);
+            font-family: 'EB Garamond', serif;
+        }
+        
+        /* ============ NOW SECTION ============ */
+        .now-section {
+            background: var(--dark-bg);
+            color: var(--paper);
+            padding: 6rem 1in;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .now-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            pointer-events: none;
+            mix-blend-mode: overlay;
+        }
+        
+        .now-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .now-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .now-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--dark-muted);
+            font-weight: 500;
+        }
+        
+        .now-pulse {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .now-pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7);
+            }
+            50% {
+                opacity: 0.7;
+                box-shadow: 0 0 0 8px rgba(0, 255, 136, 0);
+            }
+        }
+        
+        .now-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        
+        .now-text-block h2 {
+            font-family: 'EB Garamond', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .now-text-block h2 .italic-tail {
+            font-style: italic;
+        }
+        
+        .now-dash {
+            width: 50px;
+            height: 2px;
+            background: var(--paper);
+            margin-bottom: 2rem;
+        }
+        
+        .now-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .now-list li {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--light);
+            padding: 1rem 0;
+            border-bottom: 0.5px solid var(--hairline-dk);
+            display: flex;
+            gap: 1.25rem;
+            align-items: baseline;
+        }
+        
+        .now-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .now-list-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gray-text);
+            font-weight: 500;
+            min-width: 90px;
+            flex-shrink: 0;
+        }
+        
+        .now-list-text em {
+            font-style: italic;
+            color: var(--paper);
+        }
+        
+        /* Inline links within now section */
+        .now-list-text .inline-link {
+            color: var(--paper);
+            text-decoration: none;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.4);
+            padding-bottom: 1px;
+            transition: border-color 0.3s ease, color 0.3s ease;
+            font-style: italic;
+        }
+        
+        .now-list-text .inline-link:hover {
+            border-color: var(--paper);
+            color: #fff;
+        }
+        
+        /* Stats block */
+        .stats-block {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .stat-item {
+            border-top: 0.5px solid var(--hairline-dk);
+            padding-top: 1.5rem;
+        }
+        
+        .stat-number {
+            font-family: 'EB Garamond', serif;
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-number .italic-tail {
+            font-style: italic;
+        }
+        
+        .stat-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--dark-muted);
+            font-weight: 500;
+        }
+        
+        /* ============ NEWSLETTER ============ */
+        .newsletter-section {
+            padding: 5rem 1in;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 0.5px solid var(--hairline-lt);
+        }
+        
+        .newsletter-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .newsletter-text h2 {
+            font-family: 'EB Garamond', serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter-text h2 .italic-tail {
+            font-style: italic;
+        }
+        
+        .newsletter-text p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1rem;
+            color: var(--gray-text);
+            line-height: 1.7;
+            font-style: italic;
+            max-width: 450px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .newsletter-input-wrapper {
+            display: flex;
+            border: 0.5px solid var(--ink);
+            border-radius: 6px;
+            overflow: hidden;
+            background: var(--paper);
+            transition: border-color 0.3s ease;
+        }
+        
+        .newsletter-input-wrapper:focus-within {
+            border-color: var(--ink);
+            box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.05);
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem 1.25rem;
+            border: none;
+            background: transparent;
+            font-family: 'EB Garamond', serif;
+            font-size: 1rem;
+            color: var(--ink);
+            outline: none;
+        }
+        
+        .newsletter-input::placeholder {
+            color: var(--muted);
+            font-style: italic;
+        }
+        
+        .newsletter-submit {
+            padding: 1rem 1.5rem;
+            background: var(--ink);
+            color: var(--paper);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .newsletter-submit:hover {
+            background: #2a2a2a;
+        }
+        
+        .newsletter-submit .arrow {
+            transition: transform 0.3s ease;
+        }
+        
+        .newsletter-submit:hover .arrow {
+            transform: translateX(3px);
+        }
+        
+        .newsletter-fineprint {
+            font-family: 'EB Garamond', serif;
+            font-size: 0.85rem;
+            color: var(--gray-text);
+            font-style: italic;
+        }
+        
+        /* ============ ENHANCED CONTACT ============ */
+        .contact-availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.5rem 1rem;
+            border: 0.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            margin-bottom: 2rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--paper);
+            font-weight: 500;
+        }
+        
+        .contact-availability-dot {
+            width: 7px;
+            height: 7px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .contact-collaboration-types {
+            margin: 2.5rem 0;
+            padding: 2rem 0;
+            border-top: 0.5px solid var(--hairline-dk);
+            border-bottom: 0.5px solid var(--hairline-dk);
+        }
+        
+        .contact-collab-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--dark-muted);
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+        
+        .contact-collab-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .contact-collab-item {
+            font-family: 'EB Garamond', serif;
+            font-size: 0.95rem;
+            color: var(--paper);
+            padding: 0.5rem 1rem;
+            border: 0.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+        
+        .contact-collab-item:hover {
+            border-color: var(--paper);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        /* ============ ENHANCED FOOTER ============ */
+        footer {
+            background: var(--dark-bg);
+            color: var(--dark-muted);
+            padding: 4rem 1in 2rem;
+            border-top: 0.5px solid var(--hairline-dk);
+            position: relative;
+        }
+        
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand h3 {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--paper);
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-brand h3 .italic-tail {
+            font-style: italic;
+        }
+        
+        .footer-brand p {
+            font-family: 'EB Garamond', serif;
+            font-size: 0.95rem;
+            color: var(--dark-muted);
+            font-style: italic;
+            line-height: 1.6;
+            max-width: 320px;
+        }
+        
+        .footer-col-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--dark-muted);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        
+        .footer-links a {
+            font-family: 'EB Garamond', serif;
+            font-size: 0.95rem;
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--paper);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 0.5px solid var(--hairline-dk);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-bottom-left,
+        .footer-bottom-right {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--dark-muted);
+            font-weight: 500;
+        }
+        
+        .footer-bottom-right {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .footer-watermark-mono {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--dark-muted);
+            text-transform: lowercase;
+            letter-spacing: 0;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--ink);
+            color: var(--paper);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease, background 0.3s ease;
+            z-index: 99;
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        .back-to-top:hover {
+            background: #2a2a2a;
+            transform: translateY(-3px);
+        }
+        
+        /* Personal Section - Subtle hobbies showcase */
+        .personal-section {
+            padding: 6rem 1in;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            border-top: 0.5px solid var(--hairline-lt);
+        }
+        
+        .personal-header {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            align-items: end;
+        }
+        
+        .personal-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--gray-text);
+            font-weight: 500;
+        }
+        
+        .personal-title {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: 'EB Garamond', serif;
+        }
+        
+        .personal-title .italic-tail {
+            font-style: italic;
+        }
+        
+        .personal-intro {
+            font-size: 1rem;
+            color: var(--gray-text);
+            line-height: 1.7;
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+        }
+        
+        /* Photography grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .photo-item {
+            aspect-ratio: 4/5;
+            background: var(--light-gray, #e5e7eb);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
+        
+        .photo-item:hover {
+            transform: translateY(-4px);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: filter 0.4s ease, transform 0.5s ease;
+        }
+        
+        .photo-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+            color: var(--paper);
+            font-family: 'EB Garamond', serif;
+            font-size: 0.85rem;
+            font-style: italic;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .photo-item:hover .photo-caption {
+            opacity: 1;
+        }
+        
+        /* Hobbies list */
+        .hobbies-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            padding-top: 2rem;
+            border-top: 0.5px solid var(--hairline-lt);
+        }
+        
+        .hobby-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .hobby-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            font-weight: 500;
+        }
+        
+        .hobby-name {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        
+        .hobby-name .italic-tail {
+            font-style: italic;
+        }
+        
+        .hobby-detail {
+            font-family: 'EB Garamond', serif;
+            font-size: 0.9rem;
+            color: var(--gray-text);
+            font-style: italic;
+        }
+        
+        /* View more link */
+        .personal-cta {
+            margin-top: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 0.5px solid var(--ink);
+            padding-bottom: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+        
+        .personal-cta:hover {
+            gap: 1.25rem;
+        }
+        .personal-section {
+            padding: 6rem 1in;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            border-top: 0.5px solid var(--hairline-lt);
+        }
+        
+        .personal-header {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            align-items: end;
+        }
+        
+        .personal-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--gray-text);
+            font-weight: 500;
+        }
+        
+        .personal-title {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: 'EB Garamond', serif;
+        }
+        
+        .personal-title .italic-tail {
+            font-style: italic;
+        }
+        
+        .personal-intro {
+            font-size: 1rem;
+            color: var(--gray-text);
+            line-height: 1.7;
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+        }
+        
+        /* Photography grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .photo-item {
+            aspect-ratio: 4/5;
+            background: var(--light-gray, #e5e7eb);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
+        
+        .photo-item:hover {
+            transform: translateY(-4px);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: filter 0.4s ease, transform 0.5s ease;
+        }
+        
+        .photo-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-family: 'EB Garamond', serif;
+            font-style: italic;
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+            color: var(--paper);
+            font-family: 'EB Garamond', serif;
+            font-size: 0.85rem;
+            font-style: italic;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .photo-item:hover .photo-caption {
+            opacity: 1;
+        }
+        
+        /* Hobbies list */
+        .hobbies-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            padding-top: 2rem;
+            border-top: 0.5px solid var(--hairline-lt);
+        }
+        
+        .hobby-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .hobby-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            font-weight: 500;
+        }
+        
+        .hobby-name {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        
+        .hobby-name .italic-tail {
+            font-style: italic;
+        }
+        
+        .hobby-detail {
+            font-family: 'EB Garamond', serif;
+            font-size: 0.9rem;
+            color: var(--gray-text);
+            font-style: italic;
+        }
+        
+        /* View more link */
+        .personal-cta {
+            margin-top: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 0.5px solid var(--ink);
+            padding-bottom: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+        
+        .personal-cta:hover {
+            gap: 1.25rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--dark-bg);
+            color: var(--paper);
+            padding: 5rem 1in;
+            margin-top: 5rem;
+        }
+        
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-title .italic-tail {
+            font-style: italic;
+        }
+        
+        .contact-dash {
+            width: 50px;
+            height: 2px;
+            background: var(--paper);
+            margin: 1.5rem 0 2rem;
+        }
+        
+        .contact-text {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--dark-muted);
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+        
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-link {
+            font-size: 1.125rem;
+            color: var(--paper);
+            text-decoration: none;
+            border-bottom: 1px solid var(--hairline-dk);
+            padding-bottom: 1rem;
+            display: inline-block;
+            transition: border-color 0.3s;
+        }
+        
+        .contact-link:hover {
+            border-color: var(--paper);
+        }
+        
+        .contact-text-line {
+            font-size: 1.125rem;
+            color: var(--paper);
+            line-height: 1.6;
+        }
+        
+        .contact-link-inline {
+            color: var(--paper);
+            text-decoration: none;
+            border-bottom: 1px solid var(--hairline-dk);
+            transition: border-color 0.3s;
+        }
+        
+        .contact-link-inline:hover {
+            border-color: var(--paper);
+        }
+        
+        .linkedin-icon {
+            display: inline-block;
+            color: var(--paper);
+            transition: opacity 0.3s;
+        }
+        
+        .linkedin-icon:hover {
+            opacity: 0.7;
+        }
+        
+        .contact-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--dark-muted);
+            margin-bottom: 0.5rem;
+            display: block;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: var(--dark-muted);
+            padding: 3rem 1in;
+            border-top: 0.5px solid var(--hairline-dk);
+            position: relative;
+        }
+        
+        footer p {
+            font-size: 0.875rem;
+        }
+        
+        .watermark {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--dark-muted);
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1in;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        /* Section Watermarks */
+        section {
+            position: relative;
+        }
+        
+        .section-watermark {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--light);
+            position: absolute;
+            bottom: 2rem;
+            right: 1in;
+        }
+        
+        .hero .section-watermark {
+            color: var(--hairline-dk);
+        }
+        
+        .contact-section .section-watermark {
+            color: var(--hairline-dk);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav, section, .contact-section, footer {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            
+            .hero {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .projects-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo-text"><span class="name">Khay</span> Loke</a>
+            <ul class="nav-links">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#personal">Personal</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-spotlight"></div>
+        <div class="hero-bg-watermark">DESIGN</div>
+        <div class="hero-circle"></div>
+        <div class="hero-vertical-lines">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-eyebrow">
+                    <span class="hero-eyebrow-text">CREATOR & PROMPT ENGINEER</span>
+                    <span class="hero-eyebrow-line"></span>
+                </div>
+                <h1>Khay <span class="name-italic">Loke.</span></h1>
+                <div class="short-dash"></div>
+                <div class="hero-tagline-wrapper">
+                    <p class="hero-tagline">Creator of the Five Prompts series.</p>
+                    <div class="rotating-words">
+                        <span class="label">CURRENTLY</span>
+                        <span class="rotating-word-stage" id="rotatingStage">
+                            <span class="rotating-word active">Building.</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="hero-ctas">
+                    <a href="#work" class="hero-btn hero-btn-primary" data-magnetic>
+                        View My Work
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="#about" class="hero-btn hero-btn-secondary" data-magnetic>
+                        About Me
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-portrait">
+                <div class="hero-portrait-frame">
+                    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+                        <defs>
+                            <!-- Studio gradient background -->
+                            <radialGradient id="studioBg" cx="50%" cy="40%" r="75%">
+                                <stop offset="0%" stop-color="#b5b3ae"/>
+                                <stop offset="60%" stop-color="#9a9893"/>
+                                <stop offset="100%" stop-color="#7a7873"/>
+                            </radialGradient>
+                            <!-- Skin gradient -->
+                            <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#d8c5b0"/>
+                                <stop offset="100%" stop-color="#9a8775"/>
+                            </linearGradient>
+                            <!-- Hair gradient -->
+                            <linearGradient id="hairGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+                                <stop offset="0%" stop-color="#1a1a1a"/>
+                                <stop offset="100%" stop-color="#0a0a0a"/>
+                            </linearGradient>
+                            <!-- Soft light from above -->
+                            <radialGradient id="topLight" cx="50%" cy="20%" r="50%">
+                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+                                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                        
+                        <!-- Studio backdrop -->
+                        <rect width="400" height="500" fill="url(#studioBg)"/>
+                        <rect width="400" height="500" fill="url(#topLight)"/>
+                        
+                        <!-- Subtle backdrop seam shadow on left -->
+                        <rect x="0" y="0" width="80" height="500" fill="#000" opacity="0.08"/>
+                        
+                        <!-- Suit jacket / shoulders (very dark, structured) -->
+                        <path d="M 40,500 L 40,395 Q 65,355 120,338 L 280,338 Q 335,355 360,395 L 360,500 Z" fill="#0a0a0a"/>
+                        
+                        <!-- Lapel structure with subtle highlight -->
+                        <path d="M 145,340 L 178,470 L 178,500" stroke="#1f1f1f" stroke-width="1.5" fill="none"/>
+                        <path d="M 255,340 L 222,470 L 222,500" stroke="#1f1f1f" stroke-width="1.5" fill="none"/>
+                        <path d="M 148,340 L 145,360 L 165,365" stroke="#0f0f0f" stroke-width="1" fill="none"/>
+                        <path d="M 252,340 L 255,360 L 235,365" stroke="#0f0f0f" stroke-width="1" fill="none"/>
+                        
+                        <!-- Turtleneck (rises up to chin) -->
+                        <path d="M 168,338 Q 168,300 200,295 Q 232,300 232,338 L 232,360 L 168,360 Z" fill="#0a0a0a"/>
+                        <ellipse cx="200" cy="328" rx="32" ry="6" fill="#1a1a1a" opacity="0.7"/>
+                        
+                        <!-- Neck (mostly hidden by turtleneck) -->
+                        <path d="M 184,300 L 180,275 L 220,275 L 216,300 Z" fill="#9a8775"/>
+                        <path d="M 184,300 L 184,290 L 216,290 L 216,300 Z" fill="#7a6855" opacity="0.6"/>
+                        
+                        <!-- Face: rounder, fuller shape -->
+                        <ellipse cx="200" cy="200" rx="78" ry="92" fill="url(#skinGrad)"/>
+                        
+                        <!-- Soft cheek roundness (fuller cheeks) -->
+                        <ellipse cx="155" cy="230" rx="22" ry="28" fill="#c4ad95" opacity="0.5"/>
+                        <ellipse cx="245" cy="225" rx="22" ry="28" fill="#c4ad95" opacity="0.5"/>
+                        
+                        <!-- Face shadow side (left side, slightly turned away from light) -->
+                        <path d="M 122,200 Q 130,260 178,280 L 178,140 Q 145,150 130,170 Q 122,185 122,200 Z" fill="#7a6855" opacity="0.45"/>
+                        
+                        <!-- Jaw - softer, rounder -->
+                        <ellipse cx="200" cy="255" rx="62" ry="42" fill="url(#skinGrad)"/>
+                        
+                        <!-- Chin - softer, slightly fuller -->
+                        <ellipse cx="200" cy="285" rx="32" ry="18" fill="#b89e85"/>
+                        <ellipse cx="200" cy="285" rx="22" ry="6" fill="#a89685" opacity="0.6"/>
+                        
+                        <!-- Hair (messy, voluminous, swept across forehead) -->
+                        <path d="M 122,160 Q 115,115 145,88 Q 168,72 195,75 Q 225,72 250,88 Q 282,108 280,158 Q 278,178 273,182 L 270,150 Q 263,125 245,118 Q 232,122 228,135 Q 226,122 215,116 Q 205,120 202,132 Q 200,120 188,116 Q 175,120 172,135 Q 168,122 158,118 Q 142,122 132,140 Q 124,158 122,175 Q 118,170 122,160 Z" fill="url(#hairGrad)"/>
+                        
+                        <!-- Hair texture - messy strands -->
+                        <path d="M 135,135 Q 142,108 165,98" stroke="#000" stroke-width="3.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+                        <path d="M 158,105 Q 175,90 195,88" stroke="#000" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+                        <path d="M 200,86 Q 220,87 240,98" stroke="#000" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+                        <path d="M 235,98 Q 255,108 268,128" stroke="#000" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+                        <path d="M 148,118 Q 165,108 180,108" stroke="#1a1a1a" stroke-width="2" fill="none" opacity="0.6"/>
+                        <path d="M 218,108 Q 240,108 252,118" stroke="#1a1a1a" stroke-width="2" fill="none" opacity="0.6"/>
+                        <path d="M 140,150 Q 150,135 168,128" stroke="#000" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+                        <path d="M 232,128 Q 250,135 260,150" stroke="#000" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+                        
+                        <!-- Hair shadow on forehead -->
+                        <path d="M 130,155 Q 200,170 270,155 L 270,175 Q 200,188 130,175 Z" fill="#5a4a38" opacity="0.4"/>
+                        
+                        <!-- Eyebrows - thick, slightly raised (looking up) -->
+                        <path d="M 152,178 Q 173,170 192,176" stroke="#0a0a0a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                        <path d="M 208,176 Q 227,168 248,174" stroke="#0a0a0a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                        
+                        <!-- Eyes - looking up and slightly to the side -->
+                        <ellipse cx="170" cy="195" rx="9" ry="4" fill="#fff"/>
+                        <ellipse cx="227" cy="192" rx="9" ry="4" fill="#fff"/>
+                        <!-- Iris (looking up and away) -->
+                        <ellipse cx="171" cy="192" rx="4" ry="3.5" fill="#3a2818"/>
+                        <ellipse cx="228" cy="189" rx="4" ry="3.5" fill="#3a2818"/>
+                        <!-- Pupil -->
+                        <circle cx="171" cy="192" r="1.8" fill="#0a0a0a"/>
+                        <circle cx="228" cy="189" r="1.8" fill="#0a0a0a"/>
+                        <!-- Catchlight -->
+                        <circle cx="172.5" cy="190.5" r="1.2" fill="#fff"/>
+                        <circle cx="229.5" cy="187.5" r="1.2" fill="#fff"/>
+                        
+                        <!-- Upper eyelids -->
+                        <path d="M 161,191 Q 170,185 181,191" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <path d="M 218,188 Q 227,182 236,188" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <!-- Lower eyelid hint -->
+                        <path d="M 162,199 Q 170,201 180,199" stroke="#7a6855" stroke-width="0.8" fill="none" opacity="0.5"/>
+                        <path d="M 219,196 Q 227,198 235,196" stroke="#7a6855" stroke-width="0.8" fill="none" opacity="0.5"/>
+                        
+                        <!-- Nose (broader, softer) -->
+                        <path d="M 196,205 Q 192,228 188,242 Q 192,250 200,250 Q 208,250 212,242 Q 208,228 204,205" fill="#a89685" opacity="0.4"/>
+                        <!-- Nose tip highlight -->
+                        <ellipse cx="200" cy="245" rx="6" ry="4" fill="#c8b39a" opacity="0.5"/>
+                        <!-- Nostrils -->
+                        <ellipse cx="194" cy="248" rx="2.5" ry="1.8" fill="#5a4a38" opacity="0.7"/>
+                        <ellipse cx="206" cy="248" rx="2.5" ry="1.8" fill="#5a4a38" opacity="0.7"/>
+                        <!-- Nose bridge shadow (left side) -->
+                        <path d="M 194,210 Q 192,225 190,240" stroke="#7a6855" stroke-width="1" fill="none" opacity="0.4"/>
+                        
+                        <!-- Mouth (closed, neutral, slight youthful fullness) -->
+                        <path d="M 182,272 Q 200,275 218,272" stroke="#5a3528" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <!-- Lower lip highlight -->
+                        <path d="M 188,278 Q 200,282 212,278" stroke="#9a6855" stroke-width="1.5" fill="none" opacity="0.6"/>
+                        <!-- Upper lip subtle line -->
+                        <path d="M 188,268 Q 200,266 212,268" stroke="#7a4a38" stroke-width="0.5" fill="none" opacity="0.4"/>
+                        
+                        <!-- Ear (right side, partially visible through hair) -->
+                        <ellipse cx="278" cy="215" rx="9" ry="16" fill="#9a8775"/>
+                        <path d="M 273,210 Q 280,215 277,228" stroke="#5a4a38" stroke-width="1.2" fill="none" opacity="0.6"/>
+                        <ellipse cx="279" cy="225" rx="2" ry="3" fill="#7a6855" opacity="0.5"/>
+                        
+                        <!-- Subtle face contour shading -->
+                        <path d="M 122,180 Q 124,235 158,285" stroke="#5a4a38" stroke-width="1" fill="none" opacity="0.25"/>
+                        <path d="M 278,180 Q 276,235 242,285" stroke="#5a4a38" stroke-width="0.5" fill="none" opacity="0.15"/>
+                        
+                        <!-- Light catching the cheekbone (right side, light source side) -->
+                        <ellipse cx="240" cy="215" rx="14" ry="20" fill="#e8d5bc" opacity="0.25"/>
+                        
+                        <!-- Subtle blemish suggestion (small mark by mouth) for realism -->
+                        <circle cx="265" cy="245" r="1" fill="#7a6855" opacity="0.4"/>
+                    </svg>
+                </div>
+                <div class="hero-portrait-caption">
+                    <span class="caption-name">Khay Loke</span>
+                    <span class="caption-meta">PORTRAIT · 2026</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-status">
+            <span class="hero-status-line"></span>
+            <span>AVAILABLE FOR COLLABORATION</span>
+            <span class="hero-status-dot">●</span>
+            <span>2026</span>
+        </div>
+        
+        <span class="section-watermark">khay·loke</span>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work">
+        <div class="section-header reveal">
+            <h2 class="section-title">Featured<br><span class="italic-tail">Work.</span></h2>
+            <p class="section-subtitle">A working library of free prompt packs.</p>
+        </div>
+        
+        <!-- ============================================ -->
+        <!-- 📚 EBOOK LIBRARY                              -->
+        <!-- To add a new eBook:                           -->
+        <!-- 1. Upload PDF to /ebooks/ folder in repo      -->
+        <!-- 2. Copy a <script type="ebook"> block below   -->
+        <!-- 3. Update the fields and you're done!         -->
+        <!-- ============================================ -->
+        <div class="projects-grid" id="ebook-grid">
+            
+            <script type="ebook">
+            {
+                "volume": "01",
+                "title": "Run Your Home",
+                "titleLine1": "Five",
+                "titleLine2": "Prompts",
+                "titleLine3": "to Run",
+                "titleLine4": "Your",
+                "italicTail": "Home.",
+                "fullTitle": "Five Prompts to Run Your Home",
+                "tagline": ["A working library of system prompts", "to design routines, plan your week,", "and offload the mental load."],
+                "description": "A working library of system prompts to design routines, plan your week, manage your energy, and offload the mental load of running a household.",
+                "eyebrow": "FREE EDITION",
+                "footerLeft": "FREE TO DOWNLOAD · FREE TO SHARE",
+                "footerRight": "PLAN · EXECUTE · RECOVER",
+                "headerLeft": "A FREE PROMPT PACK / VOL. 01",
+                "pdfFile": "ebooks/vol-01-run-your-home.pdf",
+                "status": "PUBLISHED"
+            }
+            </script>
+            
+            <script type="ebook">
+            {
+                "volume": "02",
+                "title": "Train Your Body",
+                "titleLine1": "Five",
+                "titleLine2": "Prompts",
+                "titleLine3": "to Train",
+                "titleLine4": "Your",
+                "italicTail": "Body.",
+                "fullTitle": "Five Prompts to Train Your Body",
+                "tagline": ["A working library of system prompts", "to train harder, eat smarter, recover", "deeper, and build habits that last."],
+                "description": "A working library of system prompts to train harder, eat smarter, recover deeper, and build habits your body will thank you for.",
+                "eyebrow": "FREE EDITION",
+                "footerLeft": "FREE TO DOWNLOAD · FREE TO SHARE",
+                "footerRight": "MOVE · EAT · RECOVER",
+                "headerLeft": "A FREE PROMPT PACK / VOL. 02",
+                "pdfFile": "ebooks/vol-02-train-your-body.pdf",
+                "status": "PUBLISHED"
+            }
+            </script>
+            
+            <script type="ebook">
+            {
+                "volume": "03",
+                "title": "Land Your Offer",
+                "titleLine1": "Five Prompts",
+                "titleLine2": "to Land Your",
+                "italicTail": "Offer.",
+                "layout": "compact",
+                "fullTitle": "Five Prompts to Land Your Offer",
+                "tagline": ["A system for moving through the job", "market — the documents, the messages,", "the interviews, the offer."],
+                "description": "A system for moving through the job market — the documents, the messages, the interviews, the offer. Five prompts you will actually use.",
+                "eyebrow": "THE PROMPT PACK",
+                "footerLeft": "INCLUDES FIVE PROMPTS",
+                "footerRight": "READ · COPY · RUN",
+                "headerLeft": "A FREE PROMPT PACK / VOL. 03",
+                "pdfFile": "ebooks/vol-03-land-your-offer.pdf",
+                "status": "PUBLISHED"
+            }
+            </script>
+            
+            <script type="ebook">
+            {
+                "volume": "04",
+                "title": "Build Your Deck",
+                "titleLine1": "Five",
+                "titleLine2": "Prompts",
+                "titleLine3": "to Build",
+                "titleLine4": "Your",
+                "italicTail": "Deck.",
+                "fullTitle": "Five Prompts to Build Your Deck",
+                "tagline": ["Slides that hold the room.", "Talks that earn it."],
+                "description": "Slides that hold the room. Talks that earn it. Five prompts for structure, design, delivery, Q&A, and rehearsal.",
+                "eyebrow": "",
+                "footerLeft": "SINGLE PROMPT, CLEAR DECK",
+                "footerRight": "STRUCTURE · DESIGN · DELIVERY",
+                "headerLeft": "A FREE PROMPT PACK / VOL. 04",
+                "pdfFile": "ebooks/vol-04-build-your-deck.pdf",
+                "status": "PUBLISHED"
+            }
+            </script>
+            
+        </div>
+        <span class="section-watermark">khay·loke</span>
+    </section>
+    
+    <!-- 🛠 Auto-render eBook covers from data above -->
+    <script>
+        // Wait for the DOM to be fully loaded before running any scripts
+        document.addEventListener('DOMContentLoaded', function() {
+        
+        // ============ HERO ANIMATIONS ============
+        
+        // Cursor-following spotlight
+        const hero = document.getElementById('hero');
+        if (hero) {
+            const spotlight = hero.querySelector('.hero-spotlight');
+            
+            if (spotlight) {
+                hero.addEventListener('mousemove', (e) => {
+                    const rect = hero.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+                    spotlight.style.setProperty('--mouse-x', `${x}%`);
+                    spotlight.style.setProperty('--mouse-y', `${y}%`);
+                });
+            }
+        }
+        
+        // Rotating tagline words
+        const rotatingWords = ['Building.', 'Writing.', 'Designing.', 'Shipping.', 'Creating.', 'Helping others optimize using AI.'];
+        const stage = document.getElementById('rotatingStage');
+        let currentWordIndex = 0;
+        
+        function rotateWord() {
+            if (!stage) return;
+            const currentWord = stage.querySelector('.rotating-word.active');
+            if (!currentWord) return;
+            
+            currentWordIndex = (currentWordIndex + 1) % rotatingWords.length;
+            
+            // Create new word
+            const newWord = document.createElement('span');
+            newWord.className = 'rotating-word';
+            newWord.textContent = rotatingWords[currentWordIndex];
+            stage.appendChild(newWord);
+            
+            // Animate transition
+            requestAnimationFrame(() => {
+                currentWord.classList.remove('active');
+                currentWord.classList.add('exiting');
+                newWord.classList.add('active');
+                
+                setTimeout(() => currentWord.remove(), 500);
+            });
+        }
+        
+        if (stage) {
+            setInterval(rotateWord, 2500);
+        }
+        
+        // ============ MAGNETIC BUTTONS ============
+        const magneticElements = document.querySelectorAll('[data-magnetic]');
+        
+        magneticElements.forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                el.style.transform = `translate(${x * 0.2}px, ${y * 0.3}px)`;
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = 'translate(0, 0)';
+            });
+        });
+        
+        // ============ SCROLL REVEAL ============
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
+        });
+        
+        // Observe all elements with .reveal class
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+        
+        // ============ BACK TO TOP BUTTON ============
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 600) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // ============ NEWSLETTER FORM ============
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                const submitBtn = this.querySelector('.newsletter-submit');
+                if (!submitBtn) return;
+                const originalText = submitBtn.innerHTML;
+                
+                const isPlaceholder = this.action.includes('khayloke');
+                if (isPlaceholder && !this.action.includes('khayloke.com/newsletter')) {
+                    setTimeout(() => {
+                        submitBtn.innerHTML = '✓ Subscribed';
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            this.reset();
+                        }, 2500);
+                    }, 300);
+                }
+            });
+        }
+        
+        // ============ EBOOK GRID ============
+        const grid = document.getElementById('ebook-grid');
+        if (!grid) {
+            console.error('eBook grid not found');
+            return;
+        }
+        
+        const ebookScripts = grid.querySelectorAll('script[type="ebook"]');
+        
+        if (ebookScripts.length === 0) {
+            console.error('No eBook scripts found');
+            return;
+        }
+        
+        // Render newest first (reverse order)
+        const ebooks = [];
+        ebookScripts.forEach(s => {
+            try {
+                const data = JSON.parse(s.textContent);
+                ebooks.push(data);
+            } catch (err) {
+                console.error('Failed to parse eBook data:', err);
+            }
+        });
+        
+        const ebooksReversed = ebooks.reverse();
+        
+        // Clear the script tags from the grid
+        ebookScripts.forEach(s => s.remove());
+        
+        ebooksReversed.forEach((book, index) => {
+            const card = document.createElement('a');
+            card.className = 'project-card reveal';
+            if (index < 4) card.classList.add(`reveal-delay-${index + 1}`);
+            card.href = book.pdfFile;
+            card.target = '_blank';
+            card.rel = 'noopener';
+            card.setAttribute('data-volume', book.volume);
+            
+            // Build title lines (compact vs standard layout)
+            let titleSVG = '';
+            let taglineY = 350;
+            
+            if (book.layout === 'compact') {
+                titleSVG = `
+                    <text x="30" y="205" font-family="'EB Garamond', serif" font-size="34" font-weight="700" fill="#FFFFFF">${book.titleLine1}</text>
+                    <text x="30" y="245" font-family="'EB Garamond', serif" font-size="34" font-weight="700" fill="#FFFFFF">${book.titleLine2} <tspan font-style="italic">${book.italicTail}</tspan></text>
+                    <line x1="30" y1="262" x2="60" y2="262" stroke="#FFFFFF" stroke-width="1.5"/>
+                `;
+                taglineY = 285;
+            } else {
+                titleSVG = `
+                    <text x="30" y="200" font-family="'EB Garamond', serif" font-size="38" font-weight="700" fill="#FFFFFF">${book.titleLine1}</text>
+                    <text x="30" y="238" font-family="'EB Garamond', serif" font-size="38" font-weight="700" fill="#FFFFFF">${book.titleLine2}</text>
+                    <text x="30" y="276" font-family="'EB Garamond', serif" font-size="38" font-weight="700" fill="#FFFFFF">${book.titleLine3 || ''}</text>
+                    <text x="30" y="314" font-family="'EB Garamond', serif" font-size="38" font-weight="700" fill="#FFFFFF">${book.titleLine4 || ''} <tspan font-style="italic">${book.italicTail}</tspan></text>
+                    <line x1="30" y1="328" x2="60" y2="328" stroke="#FFFFFF" stroke-width="1.5"/>
+                `;
+                taglineY = 350;
+            }
+            
+            // Build tagline lines
+            const taglineSVG = book.tagline.map((line, i) => 
+                `<text x="30" y="${taglineY + (i * 12)}" font-family="'EB Garamond', serif" font-size="9" font-style="italic" fill="#A6A6A6">${line}</text>`
+            ).join('');
+            
+            // Build eyebrow if present
+            const eyebrowSVG = book.eyebrow ? 
+                `<text x="30" y="160" font-family="'Poppins', sans-serif" font-size="7" font-weight="500" fill="#A6A6A6" letter-spacing="1.5">${book.eyebrow}</text>` : '';
+            
+            card.innerHTML = `
+                <div class="project-cover">
+                    <svg viewBox="0 0 340 440" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                        <rect width="340" height="440" fill="#0A0A0A"/>
+                        <text x="30" y="32" font-family="'Poppins', sans-serif" font-size="6.5" font-weight="500" fill="#A6A6A6" letter-spacing="1.2">${book.headerLeft}</text>
+                        <text x="310" y="32" font-family="'Poppins', sans-serif" font-size="6.5" font-weight="500" fill="#A6A6A6" letter-spacing="1.2" text-anchor="end">KHAY LOKE</text>
+                        <line x1="30" y1="40" x2="310" y2="40" stroke="#333333" stroke-width="0.5"/>
+                        ${eyebrowSVG}
+                        ${titleSVG}
+                        ${taglineSVG}
+                        <text x="30" y="415" font-family="'Poppins', sans-serif" font-size="6" font-weight="500" fill="#A6A6A6" letter-spacing="1.2">${book.footerLeft}</text>
+                        <text x="310" y="415" font-family="'Poppins', sans-serif" font-size="6" font-weight="500" fill="#A6A6A6" letter-spacing="1.2" text-anchor="end">${book.footerRight}</text>
+                        <text x="310" y="430" font-family="'Roboto Mono', monospace" font-size="5.5" fill="#A6A6A6" text-anchor="end">khay·loke</text>
+                    </svg>
+                </div>
+                <div class="project-meta">
+                    <p class="project-number">VOL. ${book.volume}</p>
+                    <h3>${book.fullTitle}</h3>
+                    <p>${book.description}</p>
+                </div>
+            `;
+            
+            grid.appendChild(card);
+        });
+        
+        // Re-observe the dynamically created cards
+        grid.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+        
+        }); // End DOMContentLoaded
+    </script>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header reveal">
+            <h2 class="section-title">What I<br><span class="italic-tail">Do.</span></h2>
+            <p class="section-subtitle">A practice across AI, design, and systems.</p>
+        </div>
+        
+        <div class="about-intro reveal">
+            <div class="about-intro-label">THE PRACTICE</div>
+            <p class="about-intro-text">I build small, deliberate systems for working with AI — eBooks, prompts, tools, and content that help people move faster without losing the thread. The work is <em>quiet by design</em>, editorial in feel, and useful by default.</p>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-item reveal reveal-delay-1">
+                <p class="about-item-number">01</p>
+                <h3>AI & Prompt <span class="italic-tail">Engineering.</span></h3>
+                <p>Crafting effective prompts and building AI-powered tools that solve real problems for everyday productivity.</p>
+            </div>
+            
+            <div class="about-item reveal reveal-delay-2">
+                <p class="about-item-number">02</p>
+                <h3>Data <span class="italic-tail">Analytics.</span></h3>
+                <p>Three-plus years driving data quality, insights, and people-centered impact through analytical systems.</p>
+            </div>
+            
+            <div class="about-item reveal reveal-delay-3">
+                <p class="about-item-number">03</p>
+                <h3>Automation & <span class="italic-tail">Systems.</span></h3>
+                <p>Building workflows and tools that help people work smarter, not harder, through intelligent automation.</p>
+            </div>
+            
+            <div class="about-item reveal reveal-delay-4">
+                <p class="about-item-number">04</p>
+                <h3>Content <span class="italic-tail">Creation.</span></h3>
+                <p>Sharing AI productivity insights through eBooks, LinkedIn carousels, and technical documentation.</p>
+            </div>
+        </div>
+        <span class="section-watermark">khay·loke</span>
+    </section>
+
+    <!-- Personal Section -->
+    <section id="personal" class="personal-section">
+        <div class="personal-header reveal">
+            <span class="personal-label">OUTSIDE THE WORK</span>
+            <h2 class="personal-title">A few things<br>I do for <span class="italic-tail">myself.</span></h2>
+        </div>
+        
+        <p class="personal-intro reveal">When I'm not building, I'm usually reading, walking, writing for no audience, or photographing whatever caught my eye that week.</p>
+        
+        <!-- ============================================ -->
+        <!-- 📷 PHOTOGRAPHY                                -->
+        <!-- To update photos: replace the image src       -->
+        <!-- with your file paths (e.g. photos/photo1.jpg) -->
+        <!-- Captions are optional.                        -->
+        <!-- ============================================ -->
+        <div class="photo-grid">
+            <div class="photo-item reveal reveal-delay-1">
+                <div class="photo-placeholder">photo 01<br><span style="opacity:0.5;">photos/photo-01.jpg</span></div>
+                <span class="photo-caption">A quiet morning, somewhere.</span>
+            </div>
+            <div class="photo-item reveal reveal-delay-2">
+                <div class="photo-placeholder">photo 02<br><span style="opacity:0.5;">photos/photo-02.jpg</span></div>
+                <span class="photo-caption">Light, and what it touches.</span>
+            </div>
+            <div class="photo-item reveal reveal-delay-3">
+                <div class="photo-placeholder">photo 03<br><span style="opacity:0.5;">photos/photo-03.jpg</span></div>
+                <span class="photo-caption">A street in transition.</span>
+            </div>
+        </div>
+        
+        <!-- Hobbies list -->
+        <div class="hobbies-list reveal">
+            <div class="hobby-item">
+                <span class="hobby-label">01</span>
+                <span class="hobby-name"><span class="italic-tail">Photography.</span></span>
+                <span class="hobby-detail">Mostly streets, mostly mornings.</span>
+            </div>
+            <div class="hobby-item">
+                <span class="hobby-label">02</span>
+                <span class="hobby-name"><span class="italic-tail">Writing.</span></span>
+                <span class="hobby-detail">Notes, essays, drafts that stay drafts.</span>
+            </div>
+            <div class="hobby-item">
+                <span class="hobby-label">03</span>
+                <span class="hobby-name"><span class="italic-tail">Reading.</span></span>
+                <span class="hobby-detail">Nonfiction, mostly. Memoirs lately.</span>
+            </div>
+            <div class="hobby-item">
+                <span class="hobby-label">04</span>
+                <span class="hobby-name"><span class="italic-tail">Walking.</span></span>
+                <span class="hobby-detail">The city, with no destination.</span>
+            </div>
+        </div>
+        
+        <a href="#" class="personal-cta reveal">View More <span>→</span></a>
+        
+        <span class="section-watermark">khay·loke</span>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- NOW SECTION - Live status + stats             -->
+    <!-- ============================================ -->
+    <section class="now-section" id="now">
+        <div class="now-content">
+            <div class="now-header reveal">
+                <span class="now-pulse">
+                    <span class="now-pulse-dot"></span>
+                </span>
+                <span class="now-label">CURRENTLY · UPDATED MAY 2026</span>
+            </div>
+            
+            <div class="now-grid">
+                <div class="now-text-block reveal">
+                    <h2>Right<br>now, I'm <span class="italic-tail">working on.</span></h2>
+                    <div class="now-dash"></div>
+                    
+                    <ul class="now-list">
+                        <li>
+                            <span class="now-list-label">WRITING</span>
+                            <span class="now-list-text">Vol. 05 of the Five Prompts series — <em>topic in progress.</em></span>
+                        </li>
+                        <li>
+                            <span class="now-list-label">BUILDING</span>
+                            <span class="now-list-text">Chickpea — an AI tool that learns your writing voice.</span>
+                        </li>
+                        <li>
+                            <span class="now-list-label">PUBLISHING</span>
+                            <span class="now-list-text">Carousels and notes on AI productivity, weekly.</span>
+                        </li>
+                        <li>
+                            <span class="now-list-label">LEARNING</span>
+                            <span class="now-list-text">Python — the slow way, by building things I'll use.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="stats-block reveal reveal-delay-2">
+                    <div class="stat-item">
+                        <div class="stat-number">04</div>
+                        <div class="stat-label">VOLUMES PUBLISHED</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">PROMPTS SHIPPED</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">01</div>
+                        <div class="stat-label">SYSTEM, REPEATED</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="section-watermark" style="color: var(--hairline-dk);">khay·loke</span>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- NEWSLETTER SIGNUP                              -->
+    <!-- ============================================ -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="newsletter-grid">
+            <div class="newsletter-text reveal">
+                <h2>Get new prompts<br>in your <span class="italic-tail">inbox.</span></h2>
+                <p>One email when a new volume drops. No newsletter cadence, no funnel, no upsell. Free to leave anytime.</p>
+            </div>
+            
+            <form class="newsletter-form reveal reveal-delay-1" id="newsletterForm" 
+                  action="https://buttondown.email/api/emails/embed-subscribe/khayloke" 
+                  method="post" target="popupwindow">
+                <div class="newsletter-input-wrapper">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        class="newsletter-input" 
+                        placeholder="your@email.com" 
+                        required
+                        aria-label="Email address">
+                    <button type="submit" class="newsletter-submit">
+                        Subscribe
+                        <span class="arrow">→</span>
+                    </button>
+                </div>
+                <p class="newsletter-fineprint">No spam. Unsubscribe anytime.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- ENHANCED CONTACT SECTION                       -->
+    <!-- ============================================ -->
+    <section class="contact-section" id="contact">
+        <div class="contact-content reveal">
+            <div class="contact-availability">
+                <span class="contact-availability-dot"></span>
+                <span>OPEN TO WORK & COLLABORATIONS</span>
+            </div>
+            
+            <h2 class="contact-title">Let's<br><span class="italic-tail">Connect.</span></h2>
+            <div class="contact-dash"></div>
+            <p class="contact-text">Whether it's a project, a prompt pack collaboration, a speaking opportunity, or just a hello — reach out.</p>
+            
+            <div class="contact-collaboration-types">
+                <div class="contact-collab-label">OPEN FOR</div>
+                <div class="contact-collab-list">
+                    <span class="contact-collab-item">Full-time Roles</span>
+                    <span class="contact-collab-item">Consulting</span>
+                    <span class="contact-collab-item">Prompt Engineering</span>
+                    <span class="contact-collab-item">Speaking</span>
+                    <span class="contact-collab-item">Collaborations</span>
+                    <span class="contact-collab-item">Just Saying Hi</span>
+                </div>
+            </div>
+            
+            <div class="contact-links">
+                <div>
+                    <span class="contact-label">Email</span>
+                    <p class="contact-text-line">Connect with me via e-mail at <a href="mailto:lokekhayvin@gmail.com" class="contact-link-inline">lokekhayvin@gmail.com</a>.</p>
+                </div>
+                <div>
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/khay-loke-50899a14b/" class="linkedin-icon" target="_blank" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <span class="section-watermark">khay·loke</span>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- ENHANCED FOOTER                                -->
+    <!-- ============================================ -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Khay <span class="italic-tail">Loke.</span></h3>
+                <p>Creator of the Five Prompts series. Building smarter ways to work with AI.</p>
+            </div>
+            
+            <div class="footer-col">
+                <div class="footer-col-label">EXPLORE</div>
+                <ul class="footer-links">
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#personal">Personal</a></li>
+                    <li><a href="#now">Now</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <div class="footer-col-label">CONNECT</div>
+                <ul class="footer-links">
+                    <li><a href="mailto:lokekhayvin@gmail.com">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/khay-loke-50899a14b/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <div class="footer-col-label">VOLUMES</div>
+                <ul class="footer-links">
+                    <li><a href="#work">Vol. 01 — Home</a></li>
+                    <li><a href="#work">Vol. 02 — Body</a></li>
+                    <li><a href="#work">Vol. 03 — Offer</a></li>
+                    <li><a href="#work">Vol. 04 — Deck</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">© 2026 KHAY LOKE · ALL RIGHTS RESERVED</div>
+            <div class="footer-bottom-right">
+                <span>BUILT WITH CARE</span>
+                <span class="footer-watermark-mono">khay·loke</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <span>↑</span>
+    </button>
+</body>
+</html>
